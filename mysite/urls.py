@@ -16,8 +16,14 @@ Including another URLconf
 from django.urls import include, path
 from django.contrib import admin
 
+from django.contrib.auth import views
+
 urlpatterns = [
     path('', include('blog.urls')),
     path('blog/', include('blog.urls')),
     path('admin/', admin.site.urls),
+    path('accounts/login/', views.login, name='login'),
+    # url(r'^accounts/login/$', views.login, name='login')
+	path('accounts/logout/', views.logout, name='logout', kwargs={'next_page': '/'}),
+    # url(r'^accounts/logout/$', views.logout, name='logout', kwargs={'next_page': '/'}),
 ]
