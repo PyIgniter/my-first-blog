@@ -25,7 +25,7 @@ SECRET_KEY = '-(n_lqi@48&q#-p6nia70t8j(=@n%k!(0n3=34_d5!jnnm^kv)'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', 'pyigniter.pythonanywhere.com']
 
 
 # Application definition
